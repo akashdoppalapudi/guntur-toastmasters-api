@@ -7,6 +7,7 @@ import dotenv from "dotenv";
 import upcomingsRouter from "./routes/upcomings.js";
 import archivesRouter from "./routes/archives.js";
 import contactsRouter from "./routes/contacts.js";
+import newsLettersRouter from "./routes/newsLetters.js";
 
 const app = express();
 dotenv.config();
@@ -24,6 +25,7 @@ app.get("/", (req, res) => {
 app.use("/upcomings", upcomingsRouter);
 app.use("/archives", archivesRouter);
 app.use("/contacts", contactsRouter);
+app.use("/news-letters", newsLettersRouter);
 
 const PORT = process.env.PORT || 5000;
 
