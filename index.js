@@ -15,7 +15,7 @@ app.use(bodyParser.json({ limit: "30mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 app.use(cors());
 app.use((req, res, next) => {
-	res.setHeader("Acces-Control-Allow-Orgin", req.headers.origin);
+	res.setHeader("Acces-Control-Allow-Orgin", "*");
 });
 
 app.get("/", (req, res) => {
