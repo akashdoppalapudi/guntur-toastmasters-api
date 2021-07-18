@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 app.use((req, res, next) => {
 	res.setHeader("Acces-Control-Allow-Orgin", req.headers.origin);
 });
-
+app.use(cors());
 app.get("/", (req, res) => {
 	res.send(
 		"Guntur Toastmasters API. Github: https://github.com/akashdoppalapudi/guntur-toastmasters-api"
